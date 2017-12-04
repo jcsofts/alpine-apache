@@ -2,7 +2,7 @@ FROM alpine:3.6
 
 
 RUN apk update && \
-    apk add bash supervisor python python-dev py-pip apache2-proxy \
+    apk add bash supervisor apache2-proxy \
     ca-certificates certbot && \
     mkdir -p /var/log/supervisor && \
     mkdir -p /etc/letsencrypt/webrootauth && \
