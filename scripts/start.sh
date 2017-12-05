@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec /usr/bin/supervisord -n -c /etc/supervisord.conf
+exec /usr/local/bin/httpd-foreground
