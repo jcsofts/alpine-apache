@@ -2,7 +2,7 @@
 
 # Set custom webroot
 if [ ! -z "$WEBROOT" ]; then
- sed -i "s#"/var/www/html"#"${WEBROOT}"#g" /etc/apache2/httpd.conf
+ sed -i "s#\"/var/www/html\"#\"${WEBROOT}\"#g" /etc/apache2/httpd.conf
  sed -i "s#/var/www/html/$1#${WEBROOT}/$1#g" /etc/apache2/httpd.conf
 else
  webroot=/var/www/html
