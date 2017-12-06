@@ -8,7 +8,8 @@ RUN apk update && \
     rm -Rf /var/www/* && \
     mkdir -p /var/www/html/ && \
     ln -s /usr/lib/apache2 /usr/lib/modules && \
-    mkdir -p /run/apache2
+    mkdir -p /run/apache2 && \
+    rm -rf /var/cache/apk/*
 #    ln -s /usr/bin/php7 /usr/bin/php
 COPY conf/httpd.conf /etc/apache2/httpd.conf
 
