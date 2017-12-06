@@ -28,4 +28,4 @@ COPY src/ /var/www/html/
 
 EXPOSE 443 80
 
-CMD ["/start.sh"]
+CMD ["/usr/local/bin/start.sh"]
