@@ -2,9 +2,7 @@ FROM alpine:3.8
 
 
 RUN apk update && \
-    apk add apache2-proxy \
-    ca-certificates certbot && \
-    mkdir -p /etc/letsencrypt/webrootauth && \
+    apk add apache2-proxy && \
     rm -Rf /var/www/* && \
     mkdir -p /var/www/html/ && \
     ln -s /usr/lib/apache2 /usr/lib/modules && \
@@ -12,7 +10,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 
-COPY conf/httpd.conf /etc/apache2/httpd.conf
+# COPY conf/httpd.conf /etc/apache2/httpd.conf
 
 # Add Scripts
 COPY scripts/ /usr/local/bin/
