@@ -10,7 +10,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 
-# COPY conf/httpd.conf /etc/apache2/httpd.conf
+COPY conf/httpd.conf /etc/apache2/httpd.conf
 
 # Add Scripts
 COPY scripts/ /usr/local/bin/
